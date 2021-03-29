@@ -1,10 +1,62 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
 * {
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
 body {
-  width: 1440px;
-  margin: 0px 240px; 
+  width: auto;
 }
 a{
   text-decoration: none;
@@ -103,6 +155,7 @@ a{
     will-change: width;
     z-index: 99;
  }
+ 
   .nav.is-active {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.795);
@@ -314,6 +367,7 @@ h1 {
   font-size: 20px;
   
 }
+
 .dropdown .select {
     cursor: pointer;
     display: block;
@@ -346,10 +400,14 @@ h1 {
     left: -2px;
     margin-top: 1px;
     display: none;
-    max-height: 500px;
+    max-height: 200px;
     z-index: 9;
     border: solid #fff 1px;
     border-top: none;
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .dropdown .dropdown-menu li {
     padding: 15px;
@@ -371,4 +429,9 @@ h1 {
   height: 84px;
   background: #0037C6;
   border-radius: 6px;
+}
+.down_ul{
+  width: 30px;
+  height: 15px;
+  margin-left: 25px;
 }
