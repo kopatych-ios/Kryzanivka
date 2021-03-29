@@ -484,3 +484,37 @@ h1 {
   height: 15px;
   margin-left: 25px;
 }
+.sale_box{
+  display: flex;
+  position: absolute;
+  top: 50px;
+  margin-top: 200px;
+  margin-right: 50px;
+  right: 1rem;
+  width: 250px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.221);
+  border-radius: 5px;
+  border: 1px white solid ;
+}
+.img_sale{
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 80px;
+  height: 80px;
+}
+.content_sale{
+  margin-top: 15px;
+}
+.title_sale{
+  margin-left: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+}
+.disc_sale a{
+  color: #fff;
+}
+.disc_sale a:hover{
+  text-decoration: underline;
+}
