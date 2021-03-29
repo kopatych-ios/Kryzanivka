@@ -82,3 +82,42 @@ var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</s
   msg = '<span class="msg">Hidden input value: ';
 $('.msg').html(msg + input + '</span>');
 }); 
+/////////////////////////////////////////////
+
+const submit = document.querySelector(".search_btn")
+
+const inputService = document.querySelector('.dropdown')
+const inputDate = document.querySelector('#inputDate')
+const inputTime = document.querySelector('#inputTime')
+
+let data = {
+    firstinput: "",
+    secInput: "",
+    thirdInput: "",
+}
+
+
+inputService.addEventListener('click', (event)=> {
+    event.preventDefault()
+    if(event.target && event.target.tagName == "LI"){
+        data.firstinput = event.target.innerText
+    }
+})
+
+inputDate.addEventListener('click', (event)=> {
+    data.secInput = inputDate.value
+    console.log(data);
+}) 
+
+inputTime.addEventListener('click', (event)=> {
+    data.thirdInput = inputTime.value
+    console.log(data);
+}) 
+
+function sendData (event) {
+    event.preventDefault()
+    console.log(data)
+}
+
+
+
