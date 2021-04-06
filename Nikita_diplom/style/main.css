@@ -1,0 +1,540 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  width: auto;
+  margin: 0;
+  background-image: url(/img/main/bg_main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #00c6fb;
+}
+
+header {
+  width: 100%;
+  padding: 10px 30px 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+header a {
+  font-size: 15px;
+}
+.header_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.text_contact {
+  margin-left: 20px;
+  width: 50%;
+}
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: spa;
+  margin-left: 10px;
+}
+.number_text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.number_text a {
+  margin-bottom: 3px;
+}
+ul {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  position: relative;
+  display: block;
+  margin-right: 10px;
+  padding: 5px 5px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+ul li a::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+  transition: 0.5s;
+  border-radius: 8px;
+}
+ul li a:hover {
+  color: #fff;
+}
+ul li a:hover::before {
+  animation: animate 0.5s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+.content {
+  margin: 200px 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.content_text h1 {
+  font-size: 70px;
+  color: white;
+  width: 770px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.content_text p {
+  font-weight: 300;
+  font-size: 30px;
+  color: rgb(202, 202, 202);
+  width: 770px;
+  margin-top: 0;
+}
+.sale {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.527);
+  backdrop-filter: blur(3px);
+  border-radius: 13px;
+  height: 130px;
+  display: flex;
+  padding: 10px;
+}
+.img_sale {
+  height: 80px;
+  display: flex;
+}
+.title_sale {
+  color: white;
+  font-size: 60px;
+  margin-left: 50px;
+}
+.disc_sale a:hover {
+  text-decoration: underline;
+  color: linear-gradient(180deg, #00c6fb, #005bea);
+}
+.sale_img {
+  height: 80px;
+  width: 80px;
+  color: white;
+}
+.boxes {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.box {
+  width: 240px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.01);
+  border: 1px solid #686868;
+  box-sizing: border-box;
+  backdrop-filter: blur(3px);
+  border-radius: 6px;
+  margin-right: 15px;
+}
+.title_box {
+  margin-left: 15px;
+  color: rgb(255, 255, 255);
+}
+label {
+  width: 240px;
+  float: left;
+  margin-left: 25px;
+  margin-bottom: -5px;
+}
+.center {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+select {
+  z-index: 3;
+  float: left;
+}
+/** Custom Select **/
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+}
+.custom-select-wrapper select {
+  display: none;
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+  font: 13px/1.5 "Roboto", sans-serif;
+}
+.custom-select-trigger {
+  position: relative;
+  display: block;
+  width: 240px;
+  padding: 0 0 0 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 50px;
+  background: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.custom-select-trigger:hover {
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(43, 111, 246, 0.1);
+  box-shadow: 0px 10px 50px 0px rgba(43, 111, 246, 0.1);
+}
+.custom-select-trigger:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 50px;
+  top: 3px;
+  right: 50px;
+  margin-top: -3px;
+  border: none;
+  transition: all 0.35s ease-out;
+  transform-origin: 50% 0;
+}
+.custom-select-trigger:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  right: 20px;
+  margin-top: -3px;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  transform: rotate(45deg) translateY(-50%);
+  transition: all 0.35s ease-out;
+  transform-origin: 50% 0;
+}
+.custom-select.opened .custom-select-trigger:after {
+  margin-top: 3px;
+  transform: rotate(-135deg) translateY(-50%);
+}
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0%;
+  right: 0;
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.712);
+  backdrop-filter: blur(3px);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-15px);
+  border: 0;
+  overflow: auto;
+  white-space: nowrap;
+}
+.custom-options::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-options::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+.custom-options::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+*.custom-select.opened .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(-8px);
+
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(43, 111, 246, 0.1);
+  box-shadow: 0px 10px 50px 0px rgba(43, 111, 246, 0.1);
+}
+.option-hover:before {
+  background: #f9f9f9;
+}
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 22px;
+  font: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 47px;
+  cursor: pointer;
+  transition: all 0.05s ease-in-out;
+}
+.custom-option:first-of-type {
+  border-radius: 4px 4px 0 0;
+
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.custom-option:last-of-type {
+  border-bottom: 0;
+  border-radius: 0 0 4px 4px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.custom-option:hover,
+.custom-option.selection {
+  color: #fff;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+.date {
+  width: 240px;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  appearance: none;
+  margin-top: 20px;
+}
+.date:focus {
+  outline: none;
+  border-color: #5d9cf5;
+}
+
+.ui-datepicker {
+  width: 280px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.712);
+  backdrop-filter: blur(3px);
+  border-radius: 13px;
+  opacity: 0;
+}
+
+@media screen and (max-width: 580px) {
+  .ui-datepicker {
+    top: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+.ui-datepicker.active {
+  opacity: 1;
+}
+
+.ui-datepicker-header {
+  height: 40px;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.ui-datepicker-header .ui-datepicker-title {
+  text-align: center;
+  line-height: 34px;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 5px 1px;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  text-indent: 9999px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+  background: #ffffff;
+}
+
+.ui-datepicker-prev {
+  float: left;
+}
+.ui-datepicker-prev:after {
+  transform: rotate(45deg);
+  margin-left: 15px;
+}
+
+.ui-datepicker-next {
+  float: right;
+}
+.ui-datepicker-next:after {
+  transform: rotate(-135deg);
+  margin-left: 13px;
+}
+
+.ui-datepicker-prev:after,
+.ui-datepicker-next:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: -10px;
+  width: 6px;
+  height: 6px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  pointer-events: none;
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+}
+.ui-datepicker-calendar thead tr th {
+  width: 40px;
+  padding-bottom: 6px;
+}
+.ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.ui-datepicker-calendar tbody tr td {
+  padding-right: 3px;
+  padding-bottom: 3px;
+}
+.ui-datepicker-calendar tbody tr td:first-child {
+  padding-left: 3px;
+}
+
+.ui-state-default {
+  display: block;
+  text-decoration: none;
+  color: white;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.ui-state-default:hover {
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+  text-decoration: none;
+  color: white;
+}
+
+.ui-state-highlight {
+  color: #fed615;
+}
+
+.ui-state-active:not(.ui-state-highlight) {
+  color: white;
+  background: #5d9cf5;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+  color: rgba(255, 255, 255);
+  pointer-events: none;
+}
+.time {
+  background: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  width: 240px;
+  margin-top: 10px;
+  padding: 0px 15px;
+}
+.time:focus {
+  outline: none;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+}
+.search_btn {
+  width: 240px;
+  border-radius: 13px;
+  background: rgba(0, 0, 0, 0.01);
+  border: 1px solid#005bea;
+  background: none;
+  backdrop-filter: blur(3px);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.search_btn:focus {
+  outline: none;
+}
+.search_btn:hover {
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}
