@@ -80,8 +80,28 @@
                 <div class="title_box">Час</div>
                 <input class="time" id="inputTime" type="time" class="appt" name="appt"/>
             </div>  
-            <button type="submit" class="search_btn">Бронювання</button>
+            <a class="search_btn" href="#openModal">Бронювання</a>
         </div> -->
+        <div id="openModal" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">Підтвердження бронювання</h3>
+                  <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">    
+                    <div class="disc_modal">Наші клієнти важливі нам, тому ми намагаємося вдосконалити систему бронювання</div>
+                    <label for="fname"><i class="fa fa-user"></i>Iм'я</label>
+                        <input type="text" id="fname" name="firsname" placeholder="Iм'я">
+                    <label for="sname"><i class="fa fa-seconname"></i> Прізвище</label>
+                        <input type="text" id="sname" name="sname" placeholder="Прізвище">
+                    <label for="num"><i class="fa fa-number"></i> Номер телефону</label>
+                        <input type="text" id="num" name="num" placeholder="Номер телефону">
+                    <input type="submit" value="Continue to checkout" class="btn">
+                </div>
+              </div>
+            </div>
+          </div>
     <!-- </form>  -->
 </body>
 </html>
