@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h1>Виберіть процедуру</h1>
+      <form method="POST" action="/">
+        {{ form.hidden_tag() }}
+        {{ form.procedure_id.label }} {{ form.procedure_id }}
+        <input type="submit" value="Go">
+      </form>
+  </body>
+</html>
+
