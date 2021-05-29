@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Помилка{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error.css') }}">
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+
+{% block content %}
+    <div class="main_content">
+        <img class="error_img" src="{{url_for('static',filename='/img/error/ing_error.png')}}" alt="">
+        <h2>Нажаль обрана дата та час заброньована</h2>
+        <p>Спробуйте обрати іншу дату або час</p>
+    </div>
+{% endblock %}

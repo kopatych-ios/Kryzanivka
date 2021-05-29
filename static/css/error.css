@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+body {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    background-image: url(/static/img/bg_error.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 11%;
+}
+.error_img {
+    width: 500px;
+}
+h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    width: 900px;
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(43, 43, 43);
+    margin-top: 5px;
+    width: 550px;
+}

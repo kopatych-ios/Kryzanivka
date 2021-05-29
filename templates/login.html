@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Вхід{% endblock %}
+
+{% block head %}
+{{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+{% block header %}{% endblock %}
+
+
+{% block content %}
+<form action='/admin' method='POST'>
+    <div class="log">
+        <input type='text' name='username' id='username' placeholder='username'/>
+        <input type='password' name='password' id='password' placeholder='password'/>
+        <input type='submit' name='submit'/>
+    </div>
+</form>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Крижанівка{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <script defer src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+    <div class="title">
+        <h1>Про нас</h1>
+        <p>
+            На цій сторінці ви можете дізнатися про нас і про нашi пам'ятки</p>
+    </div>
+    <div class="welcome">
+        <div class="title_welcome">
+            <div class="first_part">Ласкаво просимо</div>
+            <div class="second_part">До нашого комлексу</div>
+        </div>
+        <div class="text_welcome">
+            <div class="first_p">Оздоровчий комплекс "Крижанiвка" - це ідеальне місце для відпочинку,оздоровлення всієї сім'ї на мальовничому узбережжі Азовського моря.</div>
+            <div class="second_p">Для любителів релаксу на території діє сучасний СПА-центр з басейном, сауною,тренажерним залом і салоном краси.</div>    
+        </div>
+        <section class="carousel">
+            <a href="#!" class="carousel__arrow carousel__arrow--left"></a>
+            <div class="carousel__container">
+              <img data-target="0" src="{{url_for('static',filename='img/about/sea.jpeg')}}"/>
+              <img data-target="1" class="carousel__container--active" src="{{url_for('static',filename='img/about/spa.jpeg')}}" alt="Carousel Photo Two"/>
+              <img data-target="2" src="{{url_for('static',filename='img/about/zoo.jpeg')}}"/>
+            </div>
+            <a href="#!" class="carousel__arrow carousel__arrow--right"></a>
+          </section>
+    </div>
+    <div class="statistic">
+        <div class="req">
+            <div class="text_req">
+                <div class="title_req">7</div>
+                <div class="desc_req">років ми приймаємо гостей</div>
+            </div>
+            <div class="d19"></div>
+        </div>
+        <div class="req">
+            <div class="text_req">
+                <div class="title_req">1</div>
+                <div class="desc_req">контактний зоопарк</div>
+            </div>
+            <div class="d19"></div>
+        </div>
+        <div class="req">
+            <div class="text_req">
+                <div class="title_req">15</div>
+                <div class="desc_req">гектарів доглянутої території</div>
+            </div>
+            <div class="d19"></div>
+        </div>
+    </div>
+
+    <div class="why_us">
+        <div class="title_welcome">
+            <div class="first_part">Чому саме</div>
+            <div class="second_part">наш комлекс</div>
+        </div>
+        <div class="list_plus">
+            <div class="row">
+                <div class="first_colm">
+                    <ul>
+                        <li>Безкоштовний WiFi</li>
+                        <li>Гарне розташування</li>
+                        <li>Чисте повітря</li>
+                    </ul>
+                    <div class="scale">
+                        <img src="{{url_for('static',filename='img/about/firstBlock.jpeg')}}" alt="">
+                    </div>
+                </div>
+                <div class="second_colm">
+                    <ul>
+                        <li>Досвідчені працівники</li>
+                        <li>Нове обладнання</li>
+                        <li>Зони для дітей</li>
+                    </ul>
+                    <div class="scale">
+                        <img src="{{url_for('static',filename='img/about/secondBlock.jpeg')}}" alt="">
+                    </div>
+                </div>
+                <div class="third_colm">
+                    <ul>
+                        <li>Чиста територія</li>
+                        <li>Магазини на території</li>
+                        <li>Рейсові австобуси</li>
+                    </ul>
+                    <div class="scale">
+                        <img src="{{url_for('static',filename='img/about/thirdBlock.jpeg')}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+{% endblock %}

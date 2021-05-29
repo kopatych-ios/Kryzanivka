@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Успішне бронювання{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/okay.css') }}">
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+
+{% block content %}
+    <div class="main_content">
+        <img class="ok_img" src="{{ url_for('static', filename='/img/okay/ok.png') }}" alt="">
+        <h2>Успішне бронювання</h2>
+        <p>Ви успшішно заброювали наші послуги</p>
+    </div>
+{% endblock %}
+

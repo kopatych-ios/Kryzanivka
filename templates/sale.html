@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Крижанівка{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sale.css') }}">
+    <script defer src="{{ url_for('static', filename='js/sale.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="title">
+        <h1>Акціі</h1>
+        <p>На цій сторінці ви можете дізнатися про наші акціі</p>
+    </div>
+    <div class="content">
+     
+        <div class="row">
+            <div class="date">
+                <div class="number_date">15</div>
+                <div class="month_date">грудня</div>
+            </div>
+            <div class="content_row">
+                <div class="title_row">День народження</div>
+                <div class="desq_row">В цей день наш комплекс почав свою роботу. Це дуже знаковий день для нас, тож ми хочемо щоб ви святкували з нами. І ми даруємо вам зніжку на усі послугі у 30%</div>
+            </div>
+            <div class="img_row">
+                <img src="{{ url_for('static', filename='img/sale/hb.jpeg') }}"  alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="date">
+                <div class="number_date">1</div>
+                <div class="month_date">травня</div>
+            </div>
+            <div class="content_row">
+                <div class="title_row">День праці</div>
+                <div class="desq_row">Ми занємо як ви чекаєте цей день, тож ми підготували для вас знижку у цей день. Щоб ви змогли відпочити на березі моря та подихати свіжим повитрям</div>
+            </div>
+            <div class="img_row">
+                <img src="{{ url_for('static', filename='img/sale/nature.jpeg') }}"  alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="date">
+                <div class="number_date">1</div>
+                <div class="month_date">червня</div>
+            </div>
+            <div class="content_row">
+                <div class="title_row">Перший день літа</div>
+                <div class="desq_row">А ось і перший день літа, у якій наш комплекс з радість надасть вам знижку. Та допоможе провести цей день так, щоб ви усе літо згадували про нього</div>
+            </div>
+            <div class="img_row">
+                <img src="{{ url_for('static', filename='img/sale/summer.jpeg') }}" alt="">
+            </div>
+        </div>
+    </div>    
+{% endblock %}
+

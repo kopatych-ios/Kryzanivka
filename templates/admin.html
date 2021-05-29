@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Адмін{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <script defer src="{{ url_for('static', filename='js/admin.js') }}"></script>
+{% endblock %}
+
+{% block header %}
+  <div class="logo">
+    <img src="{{ url_for('static', filename='img/header/logo.png') }}" alt="">
+  </div>
+  <div class="username">
+    {{username}}:<a href="/logout">Logout</a>
+  </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="content">
+        <!-- <table>
+            <tr>
+              <th>№</th>
+              <th>Ім'я</th>
+              <th>Прізвище</th>
+              <th>Номер телефону</th>
+              <th>Послуга</th>
+              <th>Дата</th>
+              <th>Час</th>
+            </tr>
+          </table> -->
+          <section>
+            <div class="tbl-header">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                  <tr>
+                    <th>Ім'я</th>
+                    <th>Прізвище</th>
+                    <th>Номер телефону</th>
+                    <th>Послуга</th>
+                    <th>Дата/Час</th>
+                    <th>Видалити</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="tbl-content">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                {% for item in appointments %}
+                  <tr>
+                    <td>{{ item.client.name }}</td>
+                    <td>{{ item.client.surname }}</td>
+                    <td>{{ item.client.phone }}</td>
+                    <td>{{ item.service.name }}</td>
+                    <td>{{ item.date }}</td>
+                    <th><button id='{{ item.id }}' class="trash_btn"><img class="trash_img" src="{{ url_for('static', filename='img/trash.png')}}" alt=""></button>
+                    </th>
+                  </tr>
+                {% endfor %}             
+                </tbody>
+              </table>
+            </div>
+          </section>
+            
+    </div>
+{% endblock %}
+

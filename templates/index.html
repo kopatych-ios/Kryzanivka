@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Крижанівка{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock %}
+
+
+{% block content %}
+  <div class="carousel">
+   <div class="carousel__nav">
+    <span id="moveLeft" class="carousel__arrow">
+      <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+  </svg>
+    </span>
+    <span id="moveRight" class="carousel__arrow" >
+     <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
+   <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+  </svg>    
+    </span>
+   </div>
+   <div class="carousel-item carousel-item--1">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+     <div class="carousel-item__container">
+      <h1 class="carousel-item__title">Оздоровчий комплекс "Крижанiвка"</h1>
+      <p class="carousel-item__description">Оздоровчий комплекс "Крижанiвка" - це ідеальне місце для відпочинку,оздоровлення всієї сім'ї на мальовничому узбережжі Азовського моря.</p>
+      <a href="/templates/about.html" class="carousel-item__btn">Більше про нас</a>
+      </div>
+    </div>
+   </div>
+   <div class="carousel-item carousel-item--2">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+     <div class="carousel-item__container">
+      <h1 class="carousel-item__title">Солярій</h1>
+     <p class="carousel-item__description">Наш солярій - це вертикальний професійний турбо-солярій класу «VIP».З його допомогою ви зможете придбати не тільки гарну засмагу, а й поліпшити імунітет та підняти собі настрій.</p>
+     <a href="/templates/services" class="carousel-item__btn">Більше про наші послуги</a>
+      </div>
+    </div>
+   </div>
+    <div class="carousel-item carousel-item--3">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+     <div class="carousel-item__container">
+     <h1 class="carousel-item__title">Програма лояльності</h1>
+     <p class="carousel-item__description">Лікувально-оздоровчий комплекс «Крижанiвка» пропонує скористатися Програмою Лояльності для постійних гостей. Програма лояльності дає можливість гостям нашого готелю накопичувати бонуси і обмінювати їх на приємні подарунки.</p>
+     <a href="/templates/sale" class="carousel-item__btn">Більше про акціі</a>
+      </div>
+    </div>
+   </div>
+   
+    <div class="carousel-item carousel-item--4">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+     <div class="carousel-item__container">
+     <h1 class="carousel-item__title">Пляж</h1>
+     <p class="carousel-item__description">Оздоровчий комплекс знаходить на узбережжі Азовскього моря, тож у вас буде можливість зкупатися в морі. Або почитати книгу на узбережжі, насолоджуючісь краєвідом моря та гуркотянням чайок!</p>
+     <a href="/templates/contacts.html" class="carousel-item__btn">Більше про конатакти</a>
+      </div>
+    </div>
+   </div>
+  </div>
+  <div class="second_block">
+   <div class="window_bron">
+    <div class="servives">
+     <div class="title_services">Послуга</div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><div class="select">
+      <input class="select__input" id="potencial" type="hidden" name="">
+      <div class="select__head">Оберіть послугу</div>
+      <ul class="select__list" style="display: none;">
+        <li class="select__item">Массаж</li>
+        <li class="select__item">Салон Краси</li>
+        <li class="select__item">Сауна</li>
+        <li class="select__item">Солярій</li>
+        <li class="select__item">Фітнес</li>
+      </ul>
+      </div>
+     </div>
+     <div class="date_piq">
+      <div class="title_date">Дата</div>
+      <input type="date" id="datepicker" required="required"  min="2021-05-01" max="2021-12-31">
+     </div>
+     <div class="time_piq">
+      <div class="title_time">Час</div>
+      <input type="time" id="inputTime" name="appt" required>
+     </div>
+     <a class="search_btn" href="#openModal">Бронювання</a>
+    </div>
+    
+    
+   </div>
+
+  </div>
+  <div id="openModal" class="modal">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h3 class="modal-title">Підтвердження бронювання</h3>
+      <a href="#close" title="Close" class="close">×</a>
+     </div>
+     <div class="modal-body">    
+      <div class="disc_modal">Наші клієнти важливі нам, тому ми намагаємося вдосконалити систему бронювання</div>
+      <form>
+          <label for="fname"><i class="fa fa-user"></i>
+           Введіть ім'я</label>
+            <input type="text" id="fname" name="firsname" placeholder="Iм'я" pattern="^[А-Яа-яЁё\s]+$">
+          <label for="sname"><i class="fa fa-seconname"></i>Введіть прізвище</label>
+            <input type="text" id="sname" name="sname" placeholder="Прізвище" pattern="^[А-Яа-яЁё\s]+$">
+          <label for="num"><i class="fa fa-number"></i>Ваш номер телефону</label>
+            <input type="text" id="num" name="num" placeholder="+38(000)000-00-00">
+            <div class="g-recaptcha" data-sitekey="6LcL9uwaAAAAAEZFKYneFPhHNj60ClPZKp3U3de6"></div>
+            <input onclick="sendData()" type="submit" class="btn" value="Забронювати">
+      </form>
+     </div>
+    </div>
+   </div>
+  </div> 
+
+{% endblock %}
+
